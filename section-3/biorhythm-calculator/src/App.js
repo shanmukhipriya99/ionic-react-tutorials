@@ -4,19 +4,27 @@ import {
   IonHeader,
   IonToolbar,
   IonTitle,
+  IonItem,
+  IonLabel,
+  IonInput,
 } from '@ionic/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 function App() {
+  const [name, setName] = useState('');
   return (
     <IonApp>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>My App</IonTitle>
+          <IonTitle>Biorhythms</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <p>Add some content here…</p>
+        <IonItem>
+          <IonLabel>Name:</IonLabel>
+          <IonInput type='text' value={name} onIonChange={(event) => setName(event.detail.value)}/>
+        </IonItem>
+        <p>Name: {name}</p>
       </IonContent>
     </IonApp>
   );
