@@ -1,0 +1,2 @@
+- npx: a tool that comes along with node.js and npm
+- npm i -g tiged
