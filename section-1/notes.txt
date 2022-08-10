@@ -1,0 +1,3 @@
+- Ionic is a UI-component library.
+- Allows building cross-platform apps
+- PWA: Progressive Web App 
