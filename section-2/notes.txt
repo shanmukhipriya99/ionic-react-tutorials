@@ -1,2 +1,16 @@
 - npx: a tool that comes along with node.js and npm
 - npm i -g tiged
+
+- npm install @ionic/react@^5.9.3
+- In the index.js file, 
+    import '@ionic/react/css/core.css';
+- ionicons.com (free open-source icons)
+- npm i ionicons
+
+- To set custom themes/colors, create a new file:
+    src/theme/variables.css
+    :root {
+        enter the css variables here
+    }
+  and import the file in index.js
+
