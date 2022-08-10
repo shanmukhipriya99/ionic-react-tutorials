@@ -1,4 +1,5 @@
-import {IonButton, IonToast} from '@ionic/react';
+import {IonButton, IonIcon, IonToast} from '@ionic/react';
+import { play as playIcon} from "ionicons/icons"; //setting alias using "as"
 import React, {useState} from 'react';
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
       </header>
       <main>
         <p>Add some content here…</p>
-        <IonButton onClick={handleClick}>Click here!</IonButton>
+        <IonButton onClick={handleClick}>
+        <IonIcon icon={playIcon} slot="start" /> {/*other values for slot: start, end, icon-only */}
+        Click here!</IonButton>
         <IonToast isOpen={showToast} message="Hello World!" />
       </main>
     </div>
