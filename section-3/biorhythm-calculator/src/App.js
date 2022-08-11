@@ -8,11 +8,12 @@ import {
   IonLabel,
   IonInput,
   IonDatetime,
-} from '@ionic/react';
-import React, {useState} from 'react';
+} from "@ionic/react";
+import React, { useState } from "react";
 
 function App() {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
+  const [birthDate, setBirthDate] = useState("");
   return (
     <IonApp>
       <IonHeader>
@@ -22,14 +23,23 @@ function App() {
       </IonHeader>
       <IonContent className="ion-padding">
         <IonItem>
-          <IonLabel position='floating'>Name:</IonLabel>
-          <IonInput type='text' value={name} onIonChange={(event) => setName(event.detail.value)}/>
+          <IonLabel position="floating">Name:</IonLabel>
+          <IonInput
+            type="text"
+            value={name}
+            onIonChange={(event) => setName(event.detail.value)}
+          />
         </IonItem>
         <IonItem>
-          <IonLabel position='floating'>Date of Birth:</IonLabel>
-          <IonDatetime displayFormat='MMM DD YYYY' />
+          <IonLabel position="floating">Date of Birth:</IonLabel>
+          <IonDatetime
+            displayFormat="MMM DD YYYY"
+            value={birthDate}
+            onIonChange={(event) => setBirthDate(event.detail.value)}
+          />
         </IonItem>
         <p>Name: {name}</p>
+        <p>Date of Birth: {birthDate}</p>
       </IonContent>
     </IonApp>
   );
