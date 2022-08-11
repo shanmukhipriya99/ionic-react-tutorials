@@ -14,10 +14,12 @@ import {
   IonCardTitle,
 } from "@ionic/react";
 import React, { useState } from "react";
+import BiorhythmCard from "./components/BiorhythmCard";
 
 function App() {
   // const [name, setName] = useState("");
   const [birthDate, setBirthDate] = useState("");
+  const targetDate = new Date().toISOString();
   return (
     <IonApp>
       <IonHeader>
@@ -44,14 +46,7 @@ function App() {
         </IonItem>
         {/* <p>Name: {name}</p>
         <p>Date of Birth: {birthDate}</p> */}
-        <IonCard className="ion-text-center">
-          <IonCardHeader>
-            <IonCardTitle>Title</IonCardTitle>
-          </IonCardHeader>
-          <IonCardContent>
-            <p>Physical: xx%</p>
-          </IonCardContent>
-        </IonCard>
+        <BiorhythmCard targetDate={targetDate}/>
       </IonContent>
     </IonApp>
   );
