@@ -7,6 +7,7 @@ import {
   IonItem,
   IonLabel,
   IonInput,
+  IonDatetime,
 } from '@ionic/react';
 import React, {useState} from 'react';
 
@@ -23,6 +24,10 @@ function App() {
         <IonItem>
           <IonLabel position='floating'>Name:</IonLabel>
           <IonInput type='text' value={name} onIonChange={(event) => setName(event.detail.value)}/>
+        </IonItem>
+        <IonItem>
+          <IonLabel position='floating'>Date of Birth:</IonLabel>
+          <IonDatetime displayFormat='MMM DD YYYY' />
         </IonItem>
         <p>Name: {name}</p>
       </IonContent>
