@@ -36,6 +36,9 @@ function App() {
             onIonChange={(event) => setName(event.detail.value)}
           />
         </IonItem> */}
+        {birthDate && (
+          <BiorhythmCard birthDate={birthDate} targetDate={targetDate} />
+        )}
         <IonItem>
           <IonLabel position="floating">Date of Birth:</IonLabel>
           <IonDatetime
@@ -46,7 +49,6 @@ function App() {
         </IonItem>
         {/* <p>Name: {name}</p>
         <p>Date of Birth: {birthDate}</p> */}
-        <BiorhythmCard targetDate={targetDate}/>
       </IonContent>
     </IonApp>
   );
